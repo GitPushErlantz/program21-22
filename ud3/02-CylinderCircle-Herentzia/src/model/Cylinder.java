@@ -46,4 +46,9 @@ public class Cylinder extends Circle {
     public String toString() {
         return "This is a Cylinder";  // to be refined later
     }
+    
+       @Override
+   public double getArea() {
+      return 2.0 * Math.PI * getRadius() * height;
+   }
 }
