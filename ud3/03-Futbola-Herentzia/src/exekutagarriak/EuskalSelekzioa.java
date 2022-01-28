@@ -57,6 +57,8 @@ public class EuskalSelekzioa {
     public static void bestePartaideBatzukSortu(){
         Masajista m1 = new Masajista("fisioterapeuta", 7, azkenId, "Iñaki", "Sertxiberrieta", 43);
         azkenId++;
+        Masajista m2 = new Masajista("medico", 4, azkenId, "Ander", "Etxeburu", 30);
+        azkenId++;
     }
     
     

@@ -43,4 +43,9 @@ public class Futbolista extends IntegranteSeleccion {
     public void jugarPartido() {
         System.out.println("Estoy jugando.");
     }
+
+    @Override
+    public String toString() { //apellidos, edad error
+        return "Futbolista{" + "dorsal=" + dorsal + ", demarcacion=" + demarcacion + ", id=" + id + ", nombre=" + nombre + '}';
+    }
 }

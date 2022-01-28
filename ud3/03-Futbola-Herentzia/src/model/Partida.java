@@ -47,5 +47,7 @@ public class Partida {
         this.txartelak = txartelak;
     }
     
-    
+    public void txartelaJarri(Futbolista f) {
+        txartelak.add(f);
+    }
 }
