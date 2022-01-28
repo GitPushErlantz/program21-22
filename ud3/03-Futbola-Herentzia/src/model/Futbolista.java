@@ -9,12 +9,13 @@ package model;
  *
  * @author garate.erlantz
  */
-public class Futbolista {
+public class Futbolista extends IntegranteSeleccion {
 
     private int dorsal;
     private Demarkazioa demarcacion;
 
-    public Futbolista(int dorsal, Demarkazioa demarcacion) {
+    public Futbolista(int dorsal, Demarkazioa demarcacion, int id, String nombre, String apellidos, int edad) {
+        super(id, nombre, apellidos, edad);
         this.dorsal = dorsal;
         this.demarcacion = demarcacion;
     }

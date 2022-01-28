@@ -1,5 +1,11 @@
 package exekutagarriak;
 
+import java.util.ArrayList;
+import model.Demarkazioa;
+import model.Futbolista;
+import model.IntegranteSeleccion;
+import model.Masajista;
+
 /** Programa honetan Euskal Selekzioko datuekin egingo dugu lan.
  *  Iturria: https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Euskadi#Plantilla
  *
@@ -9,6 +15,7 @@ package exekutagarriak;
 public class EuskalSelekzioa {
     
     public static int azkenId = 0; 
+    public static ArrayList <IntegranteSeleccion> selekzioa;
     
     /** Programa honek metodo desberdinei deituko die banan banan. 
      *  Beharbada ez diozu koherentzia handirik topatuko programa osoari. 
@@ -36,10 +43,10 @@ public class EuskalSelekzioa {
      *  Amaitzeko, Villalibre entrenatzen hasiko da.
     */
     public static void futbolariBat(){
-        
+        Futbolista f1 = new Futbolista(11, Demarkazioa.DEL, azkenId, "Asier", "Villalibre", 23);
     }
     
-    /** Metodo honek hiru objektu berri sortuko ditu. Pertsona hauei dagokienak: 
+   /** Metodo honek hiru objektu berri sortuko ditu. Pertsona hauei dagokienak: 
      * - Javier Clemente
      * - Iñaki Sertxiberrieta
      * - Ander Etxeburu
@@ -48,7 +55,8 @@ public class EuskalSelekzioa {
      * Objektu bakoitza sortu ondoren, bere datuak inprimatu eta kontzentratu eta bidaiatuko dute
      */
     public static void bestePartaideBatzukSortu(){
-        
+        Masajista m1 = new Masajista("fisioterapeuta", 7, azkenId, "Iñaki", "Sertxiberrieta", 43);
+        azkenId++;
     }
     
     
