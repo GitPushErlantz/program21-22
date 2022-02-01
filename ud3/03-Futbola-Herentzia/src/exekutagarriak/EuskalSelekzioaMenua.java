@@ -5,11 +5,13 @@
  */
 package exekutagarriak;
 
+import static exekutagarriak.EuskalSelekzioa.selekzioOsoaSortu;
 import model.Entrenador;
 import model.Futbolista;
 import model.IntegranteSeleccion;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import model.Masajista;
 
 /** Programa honetan Euskal Selekzioaren datuekin egingo dugu lan.
@@ -41,6 +43,20 @@ public class EuskalSelekzioaMenua {
     public static ArrayList<IntegranteSeleccion> selekzioa = new ArrayList<>(); 
        
     public static void main(String[] args) {
-                
-    }   
+        selekzioOsoaSortu();
+        int aukera;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Aukeratu aukera bat:");
+        aukera = in.nextInt();
+        if(aukera == 1){
+            partaideakIkusi();
+        }
+    }
+    
+    public static void partaideakIkusi() {
+        System.out.println("Partaideak:");
+        for (int i = 0; i < selekzioa.size(); ++i) {
+            System.out.println(selekzioa.get(i));
+        }
+    }
 }
