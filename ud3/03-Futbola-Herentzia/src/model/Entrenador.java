@@ -9,11 +9,12 @@ package model;
  *
  * @author garate.erlantz
  */
-public class Entrenador {
+public class Entrenador extends IntegranteSeleccion {
 
     private String IdFederacion;
 
-    public Entrenador(String IdFederacion) {
+    public Entrenador(String IdFederacion, int id, String nombre, String apellidos, int edad) {
+        super(id, nombre, apellidos, edad);
         this.IdFederacion = IdFederacion;
     }
 
