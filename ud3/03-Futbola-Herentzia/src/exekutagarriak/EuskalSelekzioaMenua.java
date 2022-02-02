@@ -67,7 +67,6 @@ public class EuskalSelekzioaMenua {
     }
 
     public static void selekzioOsoaSortu() {
-
         selekzioa.add(new Futbolista(1, Demarkazioa.POR, ++azkenId, "Aitor", "Fernandez", 30));
         selekzioa.add(new Futbolista(2, Demarkazioa.DEF, ++azkenId, "Unai", "Bustinza", 29));
         selekzioa.add(new Futbolista(3, Demarkazioa.DEF, ++azkenId, "Mikel", "Balenziaga", 33));
@@ -93,10 +92,25 @@ public class EuskalSelekzioaMenua {
     }
 
     public static void partaideakIkusi() {
+        int futbolariak = 0;
+        int entrenatzaileak = 0;
+        int masajistak = 0;
+        int besteak = 0;
         System.out.println("\n\nEUSKAL SELEKZIOKO PARTAIDEAK:");
         System.out.println("----------------------------");
         for (int i = 0; i < selekzioa.size(); ++i) {
             System.out.println(selekzioa.get(i));
+            if (selekzioa.get(i) instanceof Futbolista) {
+                ++futbolariak;
+            } else if (selekzioa.get(i) instanceof Entrenador) {
+                ++entrenatzaileak;
+            } else if (selekzioa.get(i) instanceof Masajista) {
+                ++masajistak;
+            } else {
+                ++besteak;
+            }
+            System.out.printf("GUZTIRA: %i futbolari, %i entrenatzaile, %i masajista eta beste %i", futbolariak, entrenatzaileak, masajistak, besteak);
         }
+        System.out.println("--------------------------------------------------------------------");
     }
 }
