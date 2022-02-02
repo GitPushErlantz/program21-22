@@ -109,8 +109,8 @@ public class EuskalSelekzioaMenua {
             } else {
                 ++besteak;
             }
-            System.out.printf("GUZTIRA: %i futbolari, %i entrenatzaile, %i masajista eta beste %i", futbolariak, entrenatzaileak, masajistak, besteak);
         }
         System.out.println("--------------------------------------------------------------------");
+        System.out.println("GUZTIRA: " + futbolariak +" futbolari, " + entrenatzaileak + " entrenatzaile, " + masajistak + " masajista eta beste " + besteak);
     }
 }
