@@ -91,7 +91,6 @@ public class EuskalSelekzioa {
             selekzioa.add(new Entrenador("Euskal selekzioa", 3, "Markel", "Lautadahandi", 40)); 
             selekzioa.add(new Masajista("Fisioterapeuta", 21, 1, "Iñaki", "Sertxiberrieta", 41));
             selekzioa.add(new IntegranteSeleccion(1, "Ander", "Etxeburu", 21)); 
-    
     }
     
     /** ArrayListetik objektu bat ezabatzen du. Aurkitzen ez badu false itzuliko du

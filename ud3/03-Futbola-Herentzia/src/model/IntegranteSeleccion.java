@@ -62,4 +62,9 @@ public class IntegranteSeleccion {
     public void viajar() {
         System.out.println("Estoy viajando");
     }
+
+    @Override
+    public String toString() {
+        return "IntegranteSeleccion{" + "id=" + id + ", nombre=" + nombre + ", edad=" + edad + ", apellidos=" + apellidos + '}';
+    }
 }
