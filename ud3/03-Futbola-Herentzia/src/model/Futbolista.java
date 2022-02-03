@@ -46,6 +46,6 @@ public class Futbolista extends IntegranteSeleccion {
 
     @Override
     public String toString() { //apellidos, edad error
-        return "Futbolista{" + "dorsal=" + dorsal + ", demarcacion=" + demarcacion + ", id=" + id + ", nombre=" + nombre + '}';
+        return "Futbolista{" + "dorsal=" + dorsal + ", demarcacion=" + demarcacion + ", id=" + id + ", nombre=" + nombre + ", apellidos=" + getApellidos() + '}';
     }
 }

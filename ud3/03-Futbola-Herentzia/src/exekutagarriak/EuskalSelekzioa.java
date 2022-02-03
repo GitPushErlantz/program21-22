@@ -99,7 +99,10 @@ public class EuskalSelekzioa {
      * @return 
      */
     public static boolean partaideaEzabatu(int id){
-
+        if(selekzioa.get(id) != null){
+            selekzioa.remove(id);
+            return true;
+        }
         return false;
     }
 }
