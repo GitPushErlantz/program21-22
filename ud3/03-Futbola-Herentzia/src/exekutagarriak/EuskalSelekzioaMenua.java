@@ -5,7 +5,6 @@
  */
 package exekutagarriak;
 
-import com.sun.org.apache.xpath.internal.functions.FuncBoolean;
 import model.Entrenador;
 import model.Futbolista;
 import model.IntegranteSeleccion;
@@ -55,7 +54,7 @@ public class EuskalSelekzioaMenua {
             System.out.println("*  3. Partaideak alfabetikoki inprimatu (ez doa)");
             System.out.println("*  4. Aldaketa");
             System.out.println("*  5. Bilatu abizenetik");
-            System.out.println("*  6. Futbolariak alfabetikoki inprimatu");
+            System.out.println("*  6. Futbolariak alfabetikoki inprimatu (ez doa)");
             System.out.println("*  ");
             System.out.println("*  ");
             System.out.print("20.- Irten\n\n");
