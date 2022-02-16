@@ -5,6 +5,7 @@
  */
 package model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 public class Erosketa {
 
     protected String kodea;
-    protected String data;
+    protected LocalDate data;
     protected Bezeroa bezeroa;
     protected ArrayList<Produktua> produktuak;
     protected ArrayList<Integer> unitateak;
@@ -26,7 +27,7 @@ public class Erosketa {
         this.guztira = guztira;
     }
 
-    public Erosketa(String kodea, String data, Bezeroa eroslea, ArrayList<Produktua> produktuak, ArrayList<Integer> unitateak, double guztira) {
+    public Erosketa(String kodea, LocalDate data, Bezeroa eroslea, ArrayList<Produktua> produktuak, ArrayList<Integer> unitateak, double guztira) {
         this.kodea = kodea;
         this.data = data;
         this.bezeroa = eroslea;
@@ -34,6 +35,23 @@ public class Erosketa {
         this.unitateak = unitateak;
         this.guztira = guztira;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Erosketa{" + "kodea=" + kodea + ", bezeroa=" + bezeroa + ", guztira=" + guztira + "}\n";
+    }
+
+    public boolean guztiraEgiaztatu() {
+        boolean isChecked = false;
+        double prezioOsoa = 0.0;
+
+        for (int i = 0; i < produktuak.size(); i++) {
+            prezioOsoa = prezioOsoa + (unitateak.get(i) * produktuak.get(i).getPrezioa());
+        }
+        if (guztira == prezioOsoa) {
+            isChecked = true;
+        }
+
+        return isChecked;
+    }
 }
