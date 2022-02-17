@@ -42,16 +42,16 @@ public class Erosketa {
     }
 
     public boolean guztiraEgiaztatu() {
-        boolean isChecked = false;
+        boolean guztiraEgiaztatu = false;
         double prezioOsoa = 0.0;
 
         for (int i = 0; i < produktuak.size(); i++) {
             prezioOsoa = prezioOsoa + (unitateak.get(i) * produktuak.get(i).getPrezioa());
         }
         if (guztira == prezioOsoa) {
-            isChecked = true;
+            guztiraEgiaztatu = true;
         }
 
-        return isChecked;
+        return guztiraEgiaztatu;
     }
 }
