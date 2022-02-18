@@ -5,6 +5,8 @@
  */
 package exekutagarriak.gui;
 
+import model.ProduktuenTableModela;
+
 /**
  *
  * @author garate.erlantz
