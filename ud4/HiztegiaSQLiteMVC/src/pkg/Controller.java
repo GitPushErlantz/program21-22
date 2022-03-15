@@ -34,7 +34,7 @@ public class Controller implements ActionListener {
         //listenerrak entzun dezakeen eragiketa bakoitzeko. Konponenteek 'actionCommad' propietatea daukate
         switch (actionCommand) {
             case "TXERTATU":
-                System.out.println("TXERTATU botoia sakatu duzu");
+                System.out.println("Txertatu botoia sakatu duzu");
                 model.terminoaGehitu(view.jTextFieldEus.getText(), view.jTextFieldEsp.getText());
         }
     }

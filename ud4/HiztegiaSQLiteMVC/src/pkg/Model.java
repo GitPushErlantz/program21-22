@@ -18,7 +18,7 @@ import java.sql.Statement;
  */
 public class Model {
 
-    private static final String DB = ":C:/Users/garate.erlantz/Documents/GitHub/program21-22/ud4/HiztegiaSQLite/db/Hiztegia.db";
+    private static final String DB = ":C:/Users/garate.erlantz/Documents/GitHub/program21-22/ud4/HiztegiaSQLiteMVC/db/Hiztegia.db";
     private static String taula = "terminoak";
 
     public static Connection connect() {
@@ -34,7 +34,7 @@ public class Model {
         return conn;
     }
 
-    public static void terminoakImprimatu() {
+    public static void terminoakInprimatu() {
         String sql = "SELECT * FROM " + taula;
 
         try (Connection conn = connect();
@@ -50,10 +50,10 @@ public class Model {
     }
 
     public static void terminoaGehitu(String euskeraz, String gazteleraz) {
-        String sql = "INSERT INTO " + taula + "(euskeraz,gazteleraz) VALUES(?,?)";
+        String sql = "INSERT INTO " + taula + "(euskeraz,gazteleraz) VALUES(?, ?)";
 
         try (Connection conn = connect();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, euskeraz);
             pstmt.setString(2, gazteleraz);
             pstmt.executeUpdate();
