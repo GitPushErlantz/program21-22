@@ -64,7 +64,6 @@ public class Model {
 
     public static void terminoaAldatu(int id, String euskeraz, String gazteleraz) {
         String sql = "UPDATE " + taula + " SET euskeraz = ? , " + "gazteleraz = ? " + "WHERE id = ?";
-
         try (Connection conn = Model.connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
