@@ -34,9 +34,6 @@ public class View extends javax.swing.JFrame {
         jTextFieldEus = new javax.swing.JTextField();
         jTextFieldEsp = new javax.swing.JTextField();
         jButtonAldatu = new javax.swing.JButton();
-        jButtonEzabatu = new javax.swing.JButton();
-        jButtonInprimatu = new javax.swing.JButton();
-        jButtonIrten = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(109, 179, 238));
@@ -75,56 +72,31 @@ public class View extends javax.swing.JFrame {
             }
         });
 
-        jButtonEzabatu.setText("Ezabatu");
-        jButtonEzabatu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEzabatuActionPerformed(evt);
-            }
-        });
-
-        jButtonInprimatu.setText("Inprimatu");
-        jButtonInprimatu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonInprimatuActionPerformed(evt);
-            }
-        });
-
-        jButtonIrten.setText("Irten");
-        jButtonIrten.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonIrtenActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelEus)
                             .addComponent(jLabelEsp)
-                            .addComponent(jButtonInprimatu)
-                            .addComponent(jButtonAldatu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jButtonAldatu))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButtonEzabatu, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                                    .addComponent(jButtonIrten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(101, 101, 101)
                                 .addComponent(jButtonTxertatu, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jTextFieldEus, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
-                                .addComponent(jTextFieldEsp)))
-                        .addGap(49, 49, 49))))
+                                .addComponent(jTextFieldEsp)))))
+                .addGap(49, 49, 49))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,18 +111,11 @@ public class View extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelEsp)
                     .addComponent(jTextFieldEsp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonAldatu)
-                            .addComponent(jButtonEzabatu))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonInprimatu)
-                            .addComponent(jButtonIrten)))
-                    .addComponent(jButtonTxertatu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonTxertatu, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAldatu))
+                .addGap(34, 34, 34))
         );
 
         pack();
@@ -169,21 +134,8 @@ public class View extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonTxertatuActionPerformed
 
     private void jButtonAldatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAldatuActionPerformed
-        ViewAldatu.viewaSortuBistaratu();
-        this.dispose();
+        
     }//GEN-LAST:event_jButtonAldatuActionPerformed
-
-    private void jButtonEzabatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEzabatuActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonEzabatuActionPerformed
-
-    private void jButtonInprimatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInprimatuActionPerformed
-        terminoakInprimatu();
-    }//GEN-LAST:event_jButtonInprimatuActionPerformed
-
-    private void jButtonIrtenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIrtenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonIrtenActionPerformed
 
       /**
        * @param args the command line arguments
@@ -231,9 +183,6 @@ public class View extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAldatu;
-    private javax.swing.JButton jButtonEzabatu;
-    private javax.swing.JButton jButtonInprimatu;
-    private javax.swing.JButton jButtonIrten;
     javax.swing.JButton jButtonTxertatu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelEsp;
